@@ -1,4 +1,5 @@
 # QEMU-Adventures
+A living documentation of things to do with QEMU.  [Thanks to A. Holbreich for the quickstart.](http://alexander.holbreich.org/qemu-kvm-introduction/)
 
 ## Installation
 Step 0: Do we support HW virtualization, and is it enabled?  If nonzero, we are good.
@@ -52,5 +53,5 @@ qemu-img convert -O qcow2 -o encryption src.img dst.img # Secret stuff, prompts 
 ## Launching
 After creating an image and identifying a boot media (.iso file for example...), a single line will spin up a virtual machine instance.  Out of the box, a number of architectures are supported, and more can be added or implemented as needed.  Here, we use Alpine Linux since it is small and designed for VM use, and indicate that the VM should share the user's access to the internet via a VPN and NAT set up locally on the host:
 ```shell
-qemu-system-x86_64 -hda disk.img -net nic -net user
+qemu-system-x86_64 -hda disk.img -cdrom alpine-virt-3.9.4-x86_64.iso -net nic -net user
 ```
