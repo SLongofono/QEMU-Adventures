@@ -55,3 +55,8 @@ After creating an image and identifying a boot media (.iso file for example...),
 ```shell
 qemu-system-x86_64 -hda disk.img -cdrom alpine-virt-3.9.4-x86_64.iso -net nic -net user
 ```
+
+## Current Test Setup
+Make QEMU with the following options to enable finer control and better debugging:
+```./configure --enable-debug --disable-pce --enable-curses
+```
