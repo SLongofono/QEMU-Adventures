@@ -58,4 +58,4 @@ qemu-system-x86_64 -hda disk.img -cdrom alpine-virt-3.9.4-x86_64.iso -net nic -n
 
 ## Current Test Setup
 Make QEMU with the following options to enable finer control and better debugging:
-```./configure --enable-debug --disable-pce --enable-curses```
+```./configure --enable-debug --disable-pie --enable-curses```
